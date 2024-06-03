@@ -1,0 +1,366 @@
+2024-06-01 16:25:20,855 main INFO: PTL.version = 9.2.0
+2024-06-01 16:25:20,855 main INFO: torch.version = 1.9.1+cu111
+2024-06-01 16:25:20,855 main INFO: torchvision.version = 0.10.1+cu111
+2024-06-01 16:25:20,855 main INFO: Running with config:
+K: 1
+buffer_size: 100
+coral_lambda: 1.0
+cut_mix: False
+data_dir: /data1/TL/data/wildtime/datasets/yearbook
+dataset: yearbook
+device: 2
+dim_bottleneck_f: None
+dim_head: 8
+emp_FI: False
+epochs: 50
+epsilon: 0.001
+eval_fix: False
+eval_metric: acc
+eval_next_timestamps: 5
+ewc_lambda: 1.0
+fisher_n: None
+gamma: 1.0
+gi_finetune_bs: 64
+gi_finetune_epochs: 5
+gi_start_to_finetune: None
+gpm_eps: 0.97
+gpm_eps_inc: 0.003
+group_size: 4
+hidden_dim: 256
+hidden_discriminator: 256
+init_timestamp: 0
+irm_lambda: 1.0
+irm_penalty_anneal_iters: 0
+lambda_forgetting: 0.1
+latent_dim: 128
+lisa: False
+lisa_intra_domain: False
+lisa_start_time: 0
+log_dir: ./checkpoints/yearbook/eval_stream/evos
+log_name: log.txt
+lr: 0.001
+lssae_coeff_ts: 1.0
+lssae_coeff_w: 1.0
+lssae_coeff_y: 1.0
+lssae_zc_dim: 64
+lssae_zw_dim: 64
+memory_pool: None
+method: evos
+mini_batch_size: 64
+mix_alpha: 2.0
+mixup: False
+momentum: 0.9
+num_head: 16
+num_layer_to_replace: -1
+num_rnn_layers: 1
+num_workers: 4
+online: False
+online_switch: False
+print_freq: 500
+random_seed: 1
+reduction: mean
+scale: 3
+scale_coff: 10
+si_c: 0.1
+split_time: 15
+time_append_dim: 32
+time_dim: 8
+tradeoff_adv: 1.0
+truncate: 1.0
+warm_max_iters: None
+warm_multiply: 30.0
+weight_decay: 0.0
+window_size: 3
+yearbook_group_size: 4
+2024-06-01 16:25:28,443 main INFO: -------------------start training on timestamp 0-------------------
+2024-06-01 16:25:28,444 main INFO: self.train_dataset.len = 11 x 64 = 758 samples
+2024-06-01 16:25:28,522 main INFO: eta: 0:00:42  timestamp: 0  [iter: 0/550]  loss_ce: 1.04395354 (1.04395354)  loss_standardization: 10.25979614 (10.25979614)  total_loss: 11.30375004 (11.30375004)  time: 0.07792473 (0.07792473)  max mem: 0.04 GB
+2024-06-01 16:25:28,847 main INFO: [0/550]  ID timestamp = 0: 	 accuracy is 29.885
+2024-06-01 16:25:30,256 main INFO: [110/550]  ID timestamp = 0: 	 accuracy is 100.000
+2024-06-01 16:25:31,664 main INFO: [220/550]  ID timestamp = 0: 	 accuracy is 98.851
+2024-06-01 16:25:33,079 main INFO: [330/550]  ID timestamp = 0: 	 accuracy is 97.701
+2024-06-01 16:25:34,494 main INFO: [440/550]  ID timestamp = 0: 	 accuracy is 98.851
+2024-06-01 16:25:35,047 main INFO: eta: 0:00:00  timestamp: 0  [iter: 500/550]  loss_ce: 0.00108336 (0.04006330)  loss_standardization: 4.48289680 (6.36239252)  total_loss: 4.48398018 (6.40245583)  time: 0.00868726 (0.01317869)  max mem: 0.04 GB
+2024-06-01 16:25:35,915 main INFO: [550/550]  ID timestamp = 0: 	 accuracy is 100.000
+2024-06-01 16:25:35,916 main INFO: -------------------end training on timestamp 0-------------------
+2024-06-01 16:25:36,334 main INFO: ID timestamp = 0: 	 accuracy is 100.000
+2024-06-01 16:25:38,731 main INFO: acc of next 5 domains: 	 [96.48162627052385, 98.01324503311258, 96.7125382262997, 97.36649597659107, 97.00996677740864]
+2024-06-01 16:25:38,731 main INFO: avg acc of next 5 domains  : 	 97.117
+2024-06-01 16:25:38,731 main INFO: worst acc of next 5 domains: 	 96.482
+2024-06-01 16:25:39,129 main INFO: -------------------start training on timestamp 1-------------------
+2024-06-01 16:25:39,131 main INFO: self.train_dataset.len = 17 x 64 = 1149 samples
+2024-06-01 16:25:39,154 main INFO: eta: 0:00:19  timestamp: 1  [iter: 0/850]  loss_ce: 0.04934549 (0.04934549)  loss_standardization: 8.11682415 (8.11682415)  loss_adv: 0.68636990 (0.68636990)  acc_dis: 71.87500000 (71.87500000)  total_loss: 8.85253906 (8.85253906)  time: 0.02303839 (0.02303839)  max mem: 0.04 GB
+2024-06-01 16:25:39,455 main INFO: [0/850]  ID timestamp = 1: 	 accuracy is 97.692
+2024-06-01 16:25:41,910 main INFO: [170/850]  ID timestamp = 1: 	 accuracy is 99.231
+2024-06-01 16:25:44,347 main INFO: [340/850]  ID timestamp = 1: 	 accuracy is 98.462
+2024-06-01 16:25:46,263 main INFO: eta: 0:00:04  timestamp: 1  [iter: 500/850]  loss_ce: 0.00056344 (0.01109912)  loss_standardization: 4.66739655 (6.44702118)  loss_adv: 0.00022601 (0.00935944)  acc_dis: 100.00000000 (99.82223054)  total_loss: 4.66818619 (6.46747974)  time: 0.01133895 (0.01423427)  max mem: 0.04 GB
+2024-06-01 16:25:46,813 main INFO: [510/850]  ID timestamp = 1: 	 accuracy is 99.231
+2024-06-01 16:25:49,261 main INFO: [680/850]  ID timestamp = 1: 	 accuracy is 98.462
+2024-06-01 16:25:51,727 main INFO: [850/850]  ID timestamp = 1: 	 accuracy is 98.462
+2024-06-01 16:25:51,728 main INFO: -------------------end training on timestamp 1-------------------
+2024-06-01 16:25:52,281 main INFO: ID timestamp = 1: 	 accuracy is 98.462
+2024-06-01 16:25:54,632 main INFO: acc of next 5 domains: 	 [98.86471144749291, 97.55351681957187, 97.8054133138259, 96.42857142857143, 97.21463681048607]
+2024-06-01 16:25:54,633 main INFO: avg acc of next 5 domains  : 	 97.573
+2024-06-01 16:25:54,633 main INFO: worst acc of next 5 domains: 	 96.429
+2024-06-01 16:25:55,045 main INFO: -------------------start training on timestamp 2-------------------
+2024-06-01 16:25:55,047 main INFO: self.train_dataset.len = 14 x 64 = 949 samples
+2024-06-01 16:25:55,069 main INFO: eta: 0:00:15  timestamp: 2  [iter: 0/700]  loss_ce: 0.01245598 (0.01245598)  loss_standardization: 9.81116676 (9.81116676)  loss_adv: 0.00203125 (0.00203125)  acc_dis: 100.00000000 (100.00000000)  total_loss: 9.82565403 (9.82565403)  time: 0.02188325 (0.02188325)  max mem: 0.04 GB
+2024-06-01 16:25:55,368 main INFO: [0/700]  ID timestamp = 2: 	 accuracy is 96.296
+2024-06-01 16:25:57,619 main INFO: [140/700]  ID timestamp = 2: 	 accuracy is 97.222
+2024-06-01 16:25:59,857 main INFO: [280/700]  ID timestamp = 2: 	 accuracy is 97.222
+2024-06-01 16:26:02,102 main INFO: [420/700]  ID timestamp = 2: 	 accuracy is 96.296
+2024-06-01 16:26:03,147 main INFO: eta: 0:00:03  timestamp: 2  [iter: 500/700]  loss_ce: 0.00020304 (0.00308950)  loss_standardization: 1.17692840 (1.29414285)  loss_adv: 0.00002689 (0.00013428)  acc_dis: 100.00000000 (100.00000000)  total_loss: 1.17715836 (1.29736662)  time: 0.01264548 (0.01616627)  max mem: 0.04 GB
+2024-06-01 16:26:04,354 main INFO: [560/700]  ID timestamp = 2: 	 accuracy is 97.222
+2024-06-01 16:26:06,603 main INFO: [700/700]  ID timestamp = 2: 	 accuracy is 97.222
+2024-06-01 16:26:06,604 main INFO: -------------------end training on timestamp 2-------------------
+2024-06-01 16:26:07,155 main INFO: ID timestamp = 2: 	 accuracy is 97.222
+2024-06-01 16:26:09,582 main INFO: acc of next 5 domains: 	 [98.70030581039755, 97.87856620336504, 96.67774086378738, 96.61387220098307, 97.57113115891742]
+2024-06-01 16:26:09,582 main INFO: avg acc of next 5 domains  : 	 97.488
+2024-06-01 16:26:09,582 main INFO: worst acc of next 5 domains: 	 96.614
+2024-06-01 16:26:09,969 main INFO: -------------------start training on timestamp 3-------------------
+2024-06-01 16:26:09,970 main INFO: self.train_dataset.len = 36 x 64 = 2353 samples
+2024-06-01 16:26:09,996 main INFO: eta: 0:00:46  timestamp: 3  [iter: 0/1800]  loss_consistency: 9.45056820 (9.45056820)  loss_ce: 0.01173160 (0.01173160)  loss_standardization: 4.33212042 (4.33212042)  loss_adv: 0.52113813 (0.52113813)  acc_dis: 88.54166412 (88.54166412)  total_loss: 14.31555843 (14.31555843)  time: 0.02564931 (0.02564931)  max mem: 0.05 GB
+2024-06-01 16:26:10,301 main INFO: [0/1800]  ID timestamp = 3: 	 accuracy is 97.719
+2024-06-01 16:26:16,423 main INFO: [360/1800]  ID timestamp = 3: 	 accuracy is 99.620
+2024-06-01 16:26:18,911 main INFO: eta: 0:00:23  timestamp: 3  [iter: 500/1800]  loss_consistency: 0.10954569 (0.25998063)  loss_ce: 0.00905085 (0.00683426)  loss_standardization: 3.29956222 (1.16458284)  loss_adv: 0.00006188 (0.00422017)  acc_dis: 100.00000000 (99.90227876)  total_loss: 3.41822076 (1.43561789)  time: 0.01778460 (0.01784437)  max mem: 0.05 GB
+2024-06-01 16:26:23,242 main INFO: [720/1800]  ID timestamp = 3: 	 accuracy is 99.620
+2024-06-01 16:26:29,010 main INFO: eta: 0:00:15  timestamp: 3  [iter: 1000/1800]  loss_consistency: 0.06378759 (0.17354669)  loss_ce: 0.00010257 (0.00357593)  loss_standardization: 0.39904475 (1.04386863)  loss_adv: 0.00013744 (0.00369734)  acc_dis: 100.00000000 (99.90868504)  total_loss: 0.46307236 (1.22468859)  time: 0.01777625 (0.01902031)  max mem: 0.05 GB
+2024-06-01 16:26:30,831 main INFO: [1080/1800]  ID timestamp = 3: 	 accuracy is 99.620
+2024-06-01 16:26:37,769 main INFO: [1440/1800]  ID timestamp = 3: 	 accuracy is 99.620
+2024-06-01 16:26:38,797 main INFO: eta: 0:00:05  timestamp: 3  [iter: 1500/1800]  loss_consistency: 0.09833387 (0.14561419)  loss_ce: 0.00005761 (0.00243922)  loss_standardization: 0.34245160 (1.00001949)  loss_adv: 0.00019596 (0.00375428)  acc_dis: 100.00000000 (99.90804740)  total_loss: 0.44103903 (1.15182718)  time: 0.01936626 (0.01920455)  max mem: 0.05 GB
+2024-06-01 16:26:44,437 main INFO: [1800/1800]  ID timestamp = 3: 	 accuracy is 99.620
+2024-06-01 16:26:44,439 main INFO: -------------------end training on timestamp 3-------------------
+2024-06-01 16:26:44,992 main INFO: ID timestamp = 3: 	 accuracy is 99.620
+2024-06-01 16:26:47,403 main INFO: acc of next 5 domains: 	 [99.12216532553035, 97.50830564784053, 94.64773347897324, 96.73837612768911, 98.04161566707467]
+2024-06-01 16:26:47,403 main INFO: avg acc of next 5 domains  : 	 97.212
+2024-06-01 16:26:47,403 main INFO: worst acc of next 5 domains: 	 94.648
+2024-06-01 16:26:47,811 main INFO: -------------------start training on timestamp 4-------------------
+2024-06-01 16:26:47,813 main INFO: self.train_dataset.len = 19 x 64 = 1229 samples
+2024-06-01 16:26:47,845 main INFO: eta: 0:00:30  timestamp: 4  [iter: 0/950]  loss_consistency: 10.81004715 (10.81004715)  loss_ce: 0.10958917 (0.10958917)  loss_standardization: 3.50993657 (3.50993657)  loss_adv: 0.01312521 (0.01312521)  acc_dis: 100.00000000 (100.00000000)  total_loss: 14.44269848 (14.44269848)  time: 0.03163695 (0.03163695)  max mem: 0.05 GB
+2024-06-01 16:26:48,158 main INFO: [0/950]  ID timestamp = 4: 	 accuracy is 99.275
+2024-06-01 16:26:52,414 main INFO: [190/950]  ID timestamp = 4: 	 accuracy is 100.000
+2024-06-01 16:26:57,001 main INFO: [380/950]  ID timestamp = 4: 	 accuracy is 100.000
+2024-06-01 16:26:59,618 main INFO: eta: 0:00:10  timestamp: 4  [iter: 500/950]  loss_consistency: 0.32491887 (0.40249288)  loss_ce: 0.00004901 (0.00398473)  loss_standardization: 0.57332098 (1.09474415)  loss_adv: 0.00002715 (0.00068459)  acc_dis: 100.00000000 (99.98284681)  total_loss: 0.89831603 (1.50190636)  time: 0.01683116 (0.02355975)  max mem: 0.05 GB
+2024-06-01 16:27:01,336 main INFO: [570/950]  ID timestamp = 4: 	 accuracy is 99.275
+2024-06-01 16:27:05,534 main INFO: [760/950]  ID timestamp = 4: 	 accuracy is 100.000
+2024-06-01 16:27:10,225 main INFO: [950/950]  ID timestamp = 4: 	 accuracy is 100.000
+2024-06-01 16:27:10,227 main INFO: -------------------end training on timestamp 4-------------------
+2024-06-01 16:27:10,740 main INFO: ID timestamp = 4: 	 accuracy is 100.000
+2024-06-01 16:27:12,842 main INFO: acc of next 5 domains: 	 [97.59136212624585, 90.8793009284544, 93.06037473976406, 96.26682986536107, 93.78029079159936]
+2024-06-01 16:27:12,843 main INFO: avg acc of next 5 domains  : 	 94.316
+2024-06-01 16:27:12,843 main INFO: worst acc of next 5 domains: 	 90.879
+2024-06-01 16:27:13,181 main INFO: -------------------start training on timestamp 5-------------------
+2024-06-01 16:27:13,183 main INFO: self.train_dataset.len = 16 x 64 = 1082 samples
+2024-06-01 16:27:13,211 main INFO: eta: 0:00:22  timestamp: 5  [iter: 0/800]  loss_consistency: 2.45220566 (2.45220566)  loss_ce: 0.01017678 (0.01017678)  loss_standardization: 1.58383107 (1.58383107)  loss_adv: 0.00089625 (0.00089625)  acc_dis: 100.00000000 (100.00000000)  total_loss: 4.04710960 (4.04710960)  time: 0.02762508 (0.02762508)  max mem: 0.05 GB
+2024-06-01 16:27:13,507 main INFO: [0/800]  ID timestamp = 5: 	 accuracy is 99.180
+2024-06-01 16:27:16,875 main INFO: [160/800]  ID timestamp = 5: 	 accuracy is 99.180
+2024-06-01 16:27:20,512 main INFO: [320/800]  ID timestamp = 5: 	 accuracy is 100.000
+2024-06-01 16:27:24,156 main INFO: [480/800]  ID timestamp = 5: 	 accuracy is 100.000
+2024-06-01 16:27:24,595 main INFO: eta: 0:00:06  timestamp: 5  [iter: 500/800]  loss_consistency: 0.12711802 (0.30534741)  loss_ce: 0.00009034 (0.00596635)  loss_standardization: 1.27843380 (1.08667003)  loss_adv: 0.00000610 (0.00021115)  acc_dis: 100.00000000 (99.99376248)  total_loss: 1.40564823 (1.39819493)  time: 0.01993203 (0.02277852)  max mem: 0.05 GB
+2024-06-01 16:27:27,898 main INFO: [640/800]  ID timestamp = 5: 	 accuracy is 99.180
+2024-06-01 16:27:31,240 main INFO: [800/800]  ID timestamp = 5: 	 accuracy is 99.180
+2024-06-01 16:27:31,242 main INFO: -------------------end training on timestamp 5-------------------
+2024-06-01 16:27:31,717 main INFO: ID timestamp = 5: 	 accuracy is 99.180
+2024-06-01 16:27:33,851 main INFO: acc of next 5 domains: 	 [96.06772255598034, 97.29354614850799, 98.8984088127295, 93.78029079159936, 76.66483214089158]
+2024-06-01 16:27:33,851 main INFO: avg acc of next 5 domains  : 	 92.541
+2024-06-01 16:27:33,852 main INFO: worst acc of next 5 domains: 	 76.665
+2024-06-01 16:27:34,198 main INFO: -------------------start training on timestamp 6-------------------
+2024-06-01 16:27:34,200 main INFO: self.train_dataset.len = 25 x 64 = 1646 samples
+2024-06-01 16:27:34,229 main INFO: eta: 0:00:35  timestamp: 6  [iter: 0/1250]  loss_consistency: 3.15887213 (3.15887213)  loss_ce: 0.11766553 (0.11766553)  loss_standardization: 0.92592102 (0.92592102)  loss_adv: 0.00249410 (0.00249410)  acc_dis: 100.00000000 (100.00000000)  total_loss: 4.20495319 (4.20495319)  time: 0.02812576 (0.02812576)  max mem: 0.05 GB
+2024-06-01 16:27:34,492 main INFO: [0/1250]  ID timestamp = 6: 	 accuracy is 96.216
+2024-06-01 16:27:39,763 main INFO: [250/1250]  ID timestamp = 6: 	 accuracy is 98.378
+2024-06-01 16:27:44,900 main INFO: eta: 0:00:16  timestamp: 6  [iter: 500/1250]  loss_consistency: 0.18898380 (0.29950305)  loss_ce: 0.00021298 (0.00870846)  loss_standardization: 0.39795655 (1.06824560)  loss_adv: 0.00001091 (0.00100155)  acc_dis: 100.00000000 (99.97764886)  total_loss: 0.58716422 (1.37745866)  time: 0.02378488 (0.02135467)  max mem: 0.05 GB
+2024-06-01 16:27:45,285 main INFO: [500/1250]  ID timestamp = 6: 	 accuracy is 98.378
+2024-06-01 16:27:50,484 main INFO: [750/1250]  ID timestamp = 6: 	 accuracy is 97.838
+2024-06-01 16:27:55,605 main INFO: eta: 0:00:05  timestamp: 6  [iter: 1000/1250]  loss_consistency: 0.20788726 (0.24716108)  loss_ce: 0.00004240 (0.00448402)  loss_standardization: 0.64409178 (0.98745783)  loss_adv: 0.00000307 (0.00050565)  acc_dis: 100.00000000 (99.98881326)  total_loss: 0.85202450 (1.23960858)  time: 0.02524805 (0.02138232)  max mem: 0.05 GB
+2024-06-01 16:27:56,017 main INFO: [1000/1250]  ID timestamp = 6: 	 accuracy is 97.838
+2024-06-01 16:28:01,301 main INFO: [1250/1250]  ID timestamp = 6: 	 accuracy is 98.378
+2024-06-01 16:28:01,303 main INFO: -------------------end training on timestamp 6-------------------
+2024-06-01 16:28:01,812 main INFO: ID timestamp = 6: 	 accuracy is 98.378
+2024-06-01 16:28:04,048 main INFO: acc of next 5 domains: 	 [98.88965995836226, 99.14320685434517, 91.47819063004846, 73.85800770500825, 62.41961414790996]
+2024-06-01 16:28:04,049 main INFO: avg acc of next 5 domains  : 	 85.158
+2024-06-01 16:28:04,049 main INFO: worst acc of next 5 domains: 	 62.420
+2024-06-01 16:28:04,413 main INFO: -------------------start training on timestamp 7-------------------
+2024-06-01 16:28:04,415 main INFO: self.train_dataset.len = 20 x 64 = 1295 samples
+2024-06-01 16:28:04,441 main INFO: eta: 0:00:26  timestamp: 7  [iter: 0/1000]  loss_consistency: 2.42322159 (2.42322159)  loss_ce: 0.00102767 (0.00102767)  loss_standardization: 0.97276527 (0.97276527)  loss_adv: 0.00014642 (0.00014642)  acc_dis: 100.00000000 (100.00000000)  total_loss: 3.39716077 (3.39716077)  time: 0.02631378 (0.02631378)  max mem: 0.05 GB
+2024-06-01 16:28:04,715 main INFO: [0/1000]  ID timestamp = 7: 	 accuracy is 100.000
+2024-06-01 16:28:09,194 main INFO: [200/1000]  ID timestamp = 7: 	 accuracy is 100.000
+2024-06-01 16:28:14,258 main INFO: [400/1000]  ID timestamp = 7: 	 accuracy is 99.315
+2024-06-01 16:28:16,484 main INFO: eta: 0:00:12  timestamp: 7  [iter: 500/1000]  loss_consistency: 0.08554667 (0.25219566)  loss_ce: 0.00005309 (0.00515554)  loss_standardization: 0.46254873 (1.02920003)  loss_adv: 0.00000390 (0.00027006)  acc_dis: 100.00000000 (99.99264863)  total_loss: 0.54815239 (1.28682129)  time: 0.02321410 (0.02408925)  max mem: 0.05 GB
+2024-06-01 16:28:19,079 main INFO: [600/1000]  ID timestamp = 7: 	 accuracy is 100.000
+2024-06-01 16:28:24,023 main INFO: [800/1000]  ID timestamp = 7: 	 accuracy is 100.000
+2024-06-01 16:28:28,390 main INFO: eta: 0:00:00  timestamp: 7  [iter: 1000/1000]  loss_consistency: 0.16125751 (0.21816243)  loss_ce: 0.00002857 (0.00262609)  loss_standardization: 0.71898448 (0.95777889)  loss_adv: 0.00000200 (0.00013753)  acc_dis: 100.00000000 (99.99632064)  total_loss: 0.88027257 (1.17870494)  time: 0.02169704 (0.02395039)  max mem: 0.05 GB
+2024-06-01 16:28:28,780 main INFO: [1000/1000]  ID timestamp = 7: 	 accuracy is 99.315
+2024-06-01 16:28:28,782 main INFO: -------------------end training on timestamp 7-------------------
+2024-06-01 16:28:29,254 main INFO: ID timestamp = 7: 	 accuracy is 99.315
+2024-06-01 16:28:31,430 main INFO: acc of next 5 domains: 	 [99.38800489596083, 93.1340872374798, 75.34397358282884, 60.73151125401929, 62.326388888888886]
+2024-06-01 16:28:31,430 main INFO: avg acc of next 5 domains  : 	 78.185
+2024-06-01 16:28:31,430 main INFO: worst acc of next 5 domains: 	 60.732
+2024-06-01 16:28:31,763 main INFO: -------------------start training on timestamp 8-------------------
+2024-06-01 16:28:31,765 main INFO: self.train_dataset.len = 22 x 64 = 1468 samples
+2024-06-01 16:28:31,798 main INFO: eta: 0:00:36  timestamp: 8  [iter: 0/1100]  loss_consistency: 1.60552526 (1.60552526)  loss_ce: 0.00517015 (0.00517015)  loss_standardization: 0.88877589 (0.88877589)  loss_adv: 0.00018271 (0.00018271)  acc_dis: 100.00000000 (100.00000000)  total_loss: 2.49965382 (2.49965382)  time: 0.03281546 (0.03281546)  max mem: 0.05 GB
+2024-06-01 16:28:32,061 main INFO: [0/1100]  ID timestamp = 8: 	 accuracy is 98.193
+2024-06-01 16:28:37,080 main INFO: [220/1100]  ID timestamp = 8: 	 accuracy is 99.398
+2024-06-01 16:28:42,306 main INFO: [440/1100]  ID timestamp = 8: 	 accuracy is 99.398
+2024-06-01 16:28:43,635 main INFO: eta: 0:00:14  timestamp: 8  [iter: 500/1100]  loss_consistency: 0.21513349 (0.19719081)  loss_ce: 0.00017071 (0.00318655)  loss_standardization: 0.94344258 (0.90499134)  loss_adv: 0.00000179 (0.00008310)  acc_dis: 100.00000000 (99.99785585)  total_loss: 1.15874851 (1.10545180)  time: 0.02192736 (0.02369212)  max mem: 0.05 GB
+2024-06-01 16:28:47,590 main INFO: [660/1100]  ID timestamp = 8: 	 accuracy is 100.000
+2024-06-01 16:28:52,841 main INFO: [880/1100]  ID timestamp = 8: 	 accuracy is 99.398
+2024-06-01 16:28:55,475 main INFO: eta: 0:00:02  timestamp: 8  [iter: 1000/1100]  loss_consistency: 0.12545897 (0.17551268)  loss_ce: 0.00002933 (0.00163941)  loss_standardization: 0.46405715 (0.87272773)  loss_adv: 0.00000196 (0.00004477)  acc_dis: 100.00000000 (99.99892685)  total_loss: 0.58954740 (1.04992459)  time: 0.02037954 (0.02368548)  max mem: 0.05 GB
+2024-06-01 16:28:58,094 main INFO: [1100/1100]  ID timestamp = 8: 	 accuracy is 99.398
+2024-06-01 16:28:58,096 main INFO: -------------------end training on timestamp 8-------------------
+2024-06-01 16:28:58,585 main INFO: ID timestamp = 8: 	 accuracy is 99.398
+2024-06-01 16:29:00,819 main INFO: acc of next 5 domains: 	 [92.32633279483036, 74.62850853054486, 60.28938906752411, 60.995370370370374, 62.808641975308646]
+2024-06-01 16:29:00,819 main INFO: avg acc of next 5 domains  : 	 70.210
+2024-06-01 16:29:00,820 main INFO: worst acc of next 5 domains: 	 60.289
+2024-06-01 16:29:01,170 main INFO: -------------------start training on timestamp 9-------------------
+2024-06-01 16:29:01,172 main INFO: self.train_dataset.len = 34 x 64 = 2227 samples
+2024-06-01 16:29:01,214 main INFO: eta: 0:01:10  timestamp: 9  [iter: 0/1700]  loss_consistency: 1.46453929 (1.46453929)  loss_ce: 0.52104378 (0.52104378)  loss_standardization: 2.07678819 (2.07678819)  loss_adv: 0.00000304 (0.00000304)  acc_dis: 100.00000000 (100.00000000)  total_loss: 4.06237411 (4.06237411)  time: 0.04148984 (0.04148984)  max mem: 0.05 GB
+2024-06-01 16:29:01,518 main INFO: [0/1700]  ID timestamp = 9: 	 accuracy is 96.386
+2024-06-01 16:29:09,535 main INFO: [340/1700]  ID timestamp = 9: 	 accuracy is 98.795
+2024-06-01 16:29:13,122 main INFO: eta: 0:00:28  timestamp: 9  [iter: 500/1700]  loss_consistency: 0.15408716 (0.27728014)  loss_ce: 0.00032085 (0.01454274)  loss_standardization: 1.70155263 (1.30789604)  loss_adv: 0.00000260 (0.00027723)  acc_dis: 100.00000000 (99.99532186)  total_loss: 1.85596323 (1.59999614)  time: 0.02280092 (0.02385104)  max mem: 0.05 GB
+2024-06-01 16:29:17,588 main INFO: [680/1700]  ID timestamp = 9: 	 accuracy is 99.197
+2024-06-01 16:29:24,795 main INFO: eta: 0:00:16  timestamp: 9  [iter: 1000/1700]  loss_consistency: 0.19428468 (0.21550747)  loss_ce: 0.00007069 (0.00739236)  loss_standardization: 0.87269324 (1.17322169)  loss_adv: 0.00000186 (0.00014035)  acc_dis: 100.00000000 (99.99765859)  total_loss: 1.06705046 (1.39626186)  time: 0.02128458 (0.02359840)  max mem: 0.05 GB
+2024-06-01 16:29:25,633 main INFO: [1020/1700]  ID timestamp = 9: 	 accuracy is 99.197
+2024-06-01 16:29:33,638 main INFO: [1360/1700]  ID timestamp = 9: 	 accuracy is 98.795
+2024-06-01 16:29:36,765 main INFO: eta: 0:00:04  timestamp: 9  [iter: 1500/1700]  loss_consistency: 0.14488341 (0.19617005)  loss_ce: 0.00005583 (0.00496825)  loss_standardization: 0.64873248 (1.10721479)  loss_adv: 0.00000111 (0.00009450)  acc_dis: 100.00000000 (99.99843854)  total_loss: 0.79367286 (1.30844759)  time: 0.02154946 (0.02371207)  max mem: 0.05 GB
+2024-06-01 16:29:41,586 main INFO: [1700/1700]  ID timestamp = 9: 	 accuracy is 99.197
+2024-06-01 16:29:41,589 main INFO: -------------------end training on timestamp 9-------------------
+2024-06-01 16:29:42,068 main INFO: ID timestamp = 9: 	 accuracy is 99.197
+2024-06-01 16:29:44,253 main INFO: acc of next 5 domains: 	 [89.04788112272978, 72.30707395498392, 74.13194444444444, 78.08641975308642, 86.5529352734571]
+2024-06-01 16:29:44,254 main INFO: avg acc of next 5 domains  : 	 80.025
+2024-06-01 16:29:44,254 main INFO: worst acc of next 5 domains: 	 72.307
+2024-06-01 16:29:44,597 main INFO: -------------------start training on timestamp 10-------------------
+2024-06-01 16:29:44,599 main INFO: self.train_dataset.len = 25 x 64 = 1634 samples
+2024-06-01 16:29:44,630 main INFO: eta: 0:00:38  timestamp: 10  [iter: 0/1250]  loss_consistency: 3.50473952 (3.50473952)  loss_ce: 0.52358121 (0.52358121)  loss_standardization: 1.38668013 (1.38668013)  loss_adv: 0.70266920 (0.70266920)  acc_dis: 95.46875000 (95.46875000)  total_loss: 6.11767006 (6.11767006)  time: 0.03052664 (0.03052664)  max mem: 0.05 GB
+2024-06-01 16:29:44,900 main INFO: [0/1250]  ID timestamp = 10: 	 accuracy is 89.071
+2024-06-01 16:29:51,268 main INFO: [250/1250]  ID timestamp = 10: 	 accuracy is 95.628
+2024-06-01 16:29:56,727 main INFO: eta: 0:00:18  timestamp: 10  [iter: 500/1250]  loss_consistency: 0.32708508 (0.32156961)  loss_ce: 0.00042062 (0.03005949)  loss_standardization: 1.05161166 (1.55611341)  loss_adv: 0.00001552 (0.00383226)  acc_dis: 100.00000000 (99.93778069)  total_loss: 1.37913287 (1.91157477)  time: 0.02105641 (0.02420800)  max mem: 0.05 GB
+2024-06-01 16:29:57,109 main INFO: [500/1250]  ID timestamp = 10: 	 accuracy is 96.721
+2024-06-01 16:30:03,297 main INFO: [750/1250]  ID timestamp = 10: 	 accuracy is 94.536
+2024-06-01 16:30:08,913 main INFO: eta: 0:00:06  timestamp: 10  [iter: 1000/1250]  loss_consistency: 0.14617810 (0.25563115)  loss_ce: 0.00012033 (0.01523521)  loss_standardization: 0.97059226 (1.36604677)  loss_adv: 0.00001377 (0.00193714)  acc_dis: 100.00000000 (99.96885927)  total_loss: 1.11690450 (1.63885027)  time: 0.02283573 (0.02428932)  max mem: 0.05 GB
+2024-06-01 16:30:09,295 main INFO: [1000/1250]  ID timestamp = 10: 	 accuracy is 96.175
+2024-06-01 16:30:15,352 main INFO: [1250/1250]  ID timestamp = 10: 	 accuracy is 95.082
+2024-06-01 16:30:15,354 main INFO: -------------------end training on timestamp 10-------------------
+2024-06-01 16:30:15,844 main INFO: ID timestamp = 10: 	 accuracy is 95.082
+2024-06-01 16:30:18,051 main INFO: acc of next 5 domains: 	 [86.37459807073955, 85.24305555555556, 86.3425925925926, 90.4666332162569, 92.67151767151766]
+2024-06-01 16:30:18,051 main INFO: avg acc of next 5 domains  : 	 88.220
+2024-06-01 16:30:18,052 main INFO: worst acc of next 5 domains: 	 85.243
+2024-06-01 16:30:18,388 main INFO: -------------------start training on timestamp 11-------------------
+2024-06-01 16:30:18,389 main INFO: self.train_dataset.len = 34 x 64 = 2238 samples
+2024-06-01 16:30:18,414 main INFO: eta: 0:00:41  timestamp: 11  [iter: 0/1700]  loss_consistency: 4.39878941 (4.39878941)  loss_ce: 0.52727425 (0.52727425)  loss_standardization: 1.53612375 (1.53612375)  loss_adv: 0.18053010 (0.18053010)  acc_dis: 96.94602203 (96.94602203)  total_loss: 6.64271736 (6.64271736)  time: 0.02461600 (0.02461600)  max mem: 0.05 GB
+2024-06-01 16:30:18,682 main INFO: [0/1700]  ID timestamp = 11: 	 accuracy is 85.600
+2024-06-01 16:30:24,308 main INFO: [340/1700]  ID timestamp = 11: 	 accuracy is 94.000
+2024-06-01 16:30:26,769 main INFO: eta: 0:00:20  timestamp: 11  [iter: 500/1700]  loss_consistency: 0.14100531 (0.35729861)  loss_ce: 0.00159696 (0.07830295)  loss_standardization: 1.29537916 (1.82022571)  loss_adv: 0.00002599 (0.00126813)  acc_dis: 100.00000000 (99.97178938)  total_loss: 1.43800735 (2.25709541)  time: 0.01605225 (0.01672425)  max mem: 0.05 GB
+2024-06-01 16:30:29,893 main INFO: [680/1700]  ID timestamp = 11: 	 accuracy is 94.400
+2024-06-01 16:30:35,460 main INFO: eta: 0:00:11  timestamp: 11  [iter: 1000/1700]  loss_consistency: 0.18765882 (0.27135155)  loss_ce: 0.00078347 (0.03992740)  loss_standardization: 1.54068875 (1.61114338)  loss_adv: 0.00000801 (0.00065448)  acc_dis: 100.00000000 (99.98588060)  total_loss: 1.72913897 (1.92307682)  time: 0.02266192 (0.01705319)  max mem: 0.05 GB
+2024-06-01 16:30:36,303 main INFO: [1020/1700]  ID timestamp = 11: 	 accuracy is 94.400
+2024-06-01 16:30:44,741 main INFO: [1360/1700]  ID timestamp = 11: 	 accuracy is 93.600
+2024-06-01 16:30:47,966 main INFO: eta: 0:00:03  timestamp: 11  [iter: 1500/1700]  loss_consistency: 0.32259455 (0.23934679)  loss_ce: 0.00021169 (0.02684954)  loss_standardization: 1.47066140 (1.51739087)  loss_adv: 0.00000942 (0.00044032)  acc_dis: 100.00000000 (99.99058393)  total_loss: 1.79347706 (1.78402753)  time: 0.02314138 (0.01970398)  max mem: 0.05 GB
+2024-06-01 16:30:53,041 main INFO: [1700/1700]  ID timestamp = 11: 	 accuracy is 94.000
+2024-06-01 16:30:53,044 main INFO: -------------------end training on timestamp 11-------------------
+2024-06-01 16:30:53,542 main INFO: ID timestamp = 11: 	 accuracy is 94.000
+2024-06-01 16:30:55,892 main INFO: acc of next 5 domains: 	 [90.2199074074074, 92.05246913580247, 91.41996989463121, 92.82744282744282, 95.36550406115623]
+2024-06-01 16:30:55,892 main INFO: avg acc of next 5 domains  : 	 92.377
+2024-06-01 16:30:55,893 main INFO: worst acc of next 5 domains: 	 90.220
+2024-06-01 16:30:56,250 main INFO: -------------------start training on timestamp 12-------------------
+2024-06-01 16:30:56,252 main INFO: self.train_dataset.len = 24 x 64 = 1553 samples
+2024-06-01 16:30:56,283 main INFO: eta: 0:00:37  timestamp: 12  [iter: 0/1200]  loss_consistency: 5.55769157 (5.55769157)  loss_ce: 0.52347565 (0.52347565)  loss_standardization: 1.42376494 (1.42376494)  loss_adv: 0.19307773 (0.19307773)  acc_dis: 97.52603912 (97.52603912)  total_loss: 7.69800997 (7.69800997)  time: 0.03125381 (0.03125381)  max mem: 0.05 GB
+2024-06-01 16:30:56,561 main INFO: [0/1200]  ID timestamp = 12: 	 accuracy is 92.571
+2024-06-01 16:31:02,579 main INFO: [240/1200]  ID timestamp = 12: 	 accuracy is 89.714
+2024-06-01 16:31:08,620 main INFO: [480/1200]  ID timestamp = 12: 	 accuracy is 90.286
+2024-06-01 16:31:09,089 main INFO: eta: 0:00:17  timestamp: 12  [iter: 500/1200]  loss_consistency: 0.26178771 (0.37356990)  loss_ce: 0.00168524 (0.04544777)  loss_standardization: 1.32927704 (1.68844824)  loss_adv: 0.00001849 (0.00179031)  acc_dis: 100.00000000 (99.95373831)  total_loss: 1.59276843 (2.10925621)  time: 0.02311444 (0.02562262)  max mem: 0.05 GB
+2024-06-01 16:31:14,686 main INFO: [720/1200]  ID timestamp = 12: 	 accuracy is 90.857
+2024-06-01 16:31:21,120 main INFO: [960/1200]  ID timestamp = 12: 	 accuracy is 89.714
+2024-06-01 16:31:22,058 main INFO: eta: 0:00:05  timestamp: 12  [iter: 1000/1200]  loss_consistency: 0.14318892 (0.28613205)  loss_ce: 0.00025039 (0.02322964)  loss_standardization: 0.96204627 (1.52498241)  loss_adv: 0.00000547 (0.00090616)  acc_dis: 100.00000000 (99.97684605)  total_loss: 1.10549104 (1.83525025)  time: 0.02126241 (0.02577896)  max mem: 0.05 GB
+2024-06-01 16:31:27,342 main INFO: [1200/1200]  ID timestamp = 12: 	 accuracy is 89.714
+2024-06-01 16:31:27,346 main INFO: -------------------end training on timestamp 12-------------------
+2024-06-01 16:31:27,849 main INFO: ID timestamp = 12: 	 accuracy is 89.714
+2024-06-01 16:31:30,301 main INFO: acc of next 5 domains: 	 [91.82098765432099, 90.36628198695435, 94.75051975051974, 95.22216913521261, 93.05263157894737]
+2024-06-01 16:31:30,302 main INFO: avg acc of next 5 domains  : 	 93.043
+2024-06-01 16:31:30,302 main INFO: worst acc of next 5 domains: 	 90.366
+2024-06-01 16:31:30,712 main INFO: -------------------start training on timestamp 13-------------------
+2024-06-01 16:31:30,714 main INFO: self.train_dataset.len = 36 x 64 = 2331 samples
+2024-06-01 16:31:30,746 main INFO: eta: 0:00:57  timestamp: 13  [iter: 0/1800]  loss_consistency: 5.69008732 (5.69008732)  loss_ce: 0.17718910 (0.17718910)  loss_standardization: 1.57798481 (1.57798481)  loss_adv: 0.27807805 (0.27807805)  acc_dis: 97.35576630 (97.35576630)  total_loss: 7.72333908 (7.72333908)  time: 0.03167796 (0.03167796)  max mem: 0.05 GB
+2024-06-01 16:31:31,073 main INFO: [0/1800]  ID timestamp = 13: 	 accuracy is 91.188
+2024-06-01 16:31:40,162 main INFO: [360/1800]  ID timestamp = 13: 	 accuracy is 94.253
+2024-06-01 16:31:43,543 main INFO: eta: 0:00:33  timestamp: 13  [iter: 500/1800]  loss_consistency: 0.20416810 (0.36006819)  loss_ce: 0.00088253 (0.03925746)  loss_standardization: 1.28375375 (1.51359014)  loss_adv: 0.00000983 (0.00182850)  acc_dis: 100.00000000 (99.96053564)  total_loss: 1.48881412 (1.91474429)  time: 0.02682447 (0.02560451)  max mem: 0.05 GB
+2024-06-01 16:31:49,212 main INFO: [720/1800]  ID timestamp = 13: 	 accuracy is 94.636
+2024-06-01 16:31:55,723 main INFO: eta: 0:00:19  timestamp: 13  [iter: 1000/1800]  loss_consistency: 0.16608098 (0.26269627)  loss_ce: 0.00036628 (0.02010042)  loss_standardization: 1.39450455 (1.42628013)  loss_adv: 0.00000867 (0.00092202)  acc_dis: 100.00000000 (99.98024811)  total_loss: 1.56096053 (1.70999884)  time: 0.02411628 (0.02498354)  max mem: 0.05 GB
+2024-06-01 16:31:58,094 main INFO: [1080/1800]  ID timestamp = 13: 	 accuracy is 94.636
+2024-06-01 16:32:07,043 main INFO: [1440/1800]  ID timestamp = 13: 	 accuracy is 94.636
+2024-06-01 16:32:08,457 main INFO: eta: 0:00:07  timestamp: 13  [iter: 1500/1800]  loss_consistency: 0.21738113 (0.22890336)  loss_ce: 0.00028850 (0.01353102)  loss_standardization: 0.91402692 (1.38188289)  loss_adv: 0.00000295 (0.00061742)  acc_dis: 100.00000000 (99.98682769)  total_loss: 1.13169956 (1.62493470)  time: 0.02262330 (0.02514437)  max mem: 0.05 GB
+2024-06-01 16:32:15,215 main INFO: [1800/1800]  ID timestamp = 13: 	 accuracy is 94.636
+2024-06-01 16:32:15,218 main INFO: -------------------end training on timestamp 13-------------------
+2024-06-01 16:32:15,726 main INFO: ID timestamp = 13: 	 accuracy is 94.636
+2024-06-01 16:32:18,097 main INFO: acc of next 5 domains: 	 [93.02558956347215, 93.97089397089398, 95.65217391304348, 94.48421052631579, 92.68527430221367]
+2024-06-01 16:32:18,097 main INFO: avg acc of next 5 domains  : 	 93.964
+2024-06-01 16:32:18,097 main INFO: worst acc of next 5 domains: 	 92.685
+2024-06-01 16:32:18,486 main INFO: -------------------start training on timestamp 14-------------------
+2024-06-01 16:32:18,488 main INFO: self.train_dataset.len = 28 x 64 = 1792 samples
+2024-06-01 16:32:18,521 main INFO: eta: 0:00:44  timestamp: 14  [iter: 0/1400]  loss_consistency: 5.69472361 (5.69472361)  loss_ce: 0.36440071 (0.36440071)  loss_standardization: 1.59894943 (1.59894943)  loss_adv: 0.16822861 (0.16822861)  acc_dis: 97.48883820 (97.48883820)  total_loss: 7.82630253 (7.82630253)  time: 0.03204441 (0.03204441)  max mem: 0.05 GB
+2024-06-01 16:32:18,851 main INFO: [0/1400]  ID timestamp = 14: 	 accuracy is 91.045
+2024-06-01 16:32:26,404 main INFO: [280/1400]  ID timestamp = 14: 	 accuracy is 96.020
+2024-06-01 16:32:31,703 main INFO: eta: 0:00:23  timestamp: 14  [iter: 500/1400]  loss_consistency: 0.13127798 (0.34037607)  loss_ce: 0.00074196 (0.02779394)  loss_standardization: 1.36369944 (1.45887980)  loss_adv: 0.00002322 (0.00143505)  acc_dis: 100.00000000 (99.96636192)  total_loss: 1.49574268 (1.82848484)  time: 0.02372432 (0.02637558)  max mem: 0.05 GB
+2024-06-01 16:32:33,599 main INFO: [560/1400]  ID timestamp = 14: 	 accuracy is 96.517
+2024-06-01 16:32:41,522 main INFO: [840/1400]  ID timestamp = 14: 	 accuracy is 96.517
+2024-06-01 16:32:45,623 main INFO: eta: 0:00:10  timestamp: 14  [iter: 1000/1400]  loss_consistency: 0.12588882 (0.25745670)  loss_ce: 0.00104718 (0.01420889)  loss_standardization: 1.35049248 (1.36364430)  loss_adv: 0.00000533 (0.00072278)  acc_dis: 100.00000000 (99.98316416)  total_loss: 1.47743380 (1.63603266)  time: 0.02477741 (0.02710593)  max mem: 0.05 GB
+2024-06-01 16:32:49,046 main INFO: [1120/1400]  ID timestamp = 14: 	 accuracy is 96.517
+2024-06-01 16:32:56,596 main INFO: [1400/1400]  ID timestamp = 14: 	 accuracy is 96.517
+2024-06-01 16:32:56,599 main INFO: -------------------end training on timestamp 14-------------------
+2024-06-01 16:32:57,104 main INFO: ID timestamp = 14: 	 accuracy is 96.517
+2024-06-01 16:32:59,345 main INFO: acc of next 5 domains: 	 [96.4137214137214, 97.41997133301481, 95.66315789473684, 94.17709335899904, 95.19572953736655]
+2024-06-01 16:32:59,346 main INFO: avg acc of next 5 domains  : 	 95.774
+2024-06-01 16:32:59,346 main INFO: worst acc of next 5 domains: 	 94.177
+2024-06-01 16:32:59,700 main INFO: -------------------start training on timestamp 15-------------------
+2024-06-01 16:32:59,701 main INFO: self.train_dataset.len = 27 x 64 = 1729 samples
+2024-06-01 16:32:59,735 main INFO: eta: 0:00:44  timestamp: 15  [iter: 0/1350]  loss_consistency: 3.91701365 (3.91701365)  loss_ce: 0.23431648 (0.23431648)  loss_standardization: 1.75115883 (1.75115883)  loss_adv: 0.04253669 (0.04253669)  acc_dis: 98.80207825 (98.80207825)  total_loss: 5.94502544 (5.94502544)  time: 0.03304839 (0.03304839)  max mem: 0.06 GB
+2024-06-01 16:33:00,013 main INFO: [0/1350]  ID timestamp = 15: 	 accuracy is 95.897
+2024-06-01 16:33:06,966 main INFO: [270/1350]  ID timestamp = 15: 	 accuracy is 95.897
+2024-06-01 16:33:12,343 main INFO: eta: 0:00:21  timestamp: 15  [iter: 500/1350]  loss_consistency: 0.19858143 (0.29391795)  loss_ce: 0.00037199 (0.01890683)  loss_standardization: 1.11400568 (1.46363938)  loss_adv: 0.00000305 (0.00032915)  acc_dis: 100.00000000 (99.98814869)  total_loss: 1.31296217 (1.77679331)  time: 0.02043629 (0.02523224)  max mem: 0.06 GB
+2024-06-01 16:33:13,772 main INFO: [540/1350]  ID timestamp = 15: 	 accuracy is 95.897
+2024-06-01 16:33:20,663 main INFO: [810/1350]  ID timestamp = 15: 	 accuracy is 95.897
+2024-06-01 16:33:24,783 main INFO: eta: 0:00:08  timestamp: 15  [iter: 1000/1350]  loss_consistency: 0.17592451 (0.23135936)  loss_ce: 0.00028161 (0.00965737)  loss_standardization: 1.58978295 (1.36460701)  loss_adv: 0.00000239 (0.00016756)  acc_dis: 100.00000000 (99.99406842)  total_loss: 1.76599145 (1.60579130)  time: 0.01857924 (0.02505528)  max mem: 0.06 GB
+2024-06-01 16:33:26,715 main INFO: [1080/1350]  ID timestamp = 15: 	 accuracy is 95.897
+2024-06-01 16:33:33,784 main INFO: [1350/1350]  ID timestamp = 15: 	 accuracy is 95.897
+2024-06-01 16:33:33,787 main INFO: -------------------end training on timestamp 15-------------------
+2024-06-01 16:33:34,334 main INFO: ID timestamp = 15: 	 accuracy is 95.897
+2024-06-01 16:33:36,904 main INFO: acc of next 5 domains: 	 [97.2766364070712, 94.94736842105263, 93.40712223291627, 94.9288256227758, 92.25753871230644]
+2024-06-01 16:33:36,904 main INFO: avg acc of next 5 domains  : 	 94.563
+2024-06-01 16:33:36,904 main INFO: worst acc of next 5 domains: 	 92.258
+2024-06-01 16:33:36,904 main INFO: timestamp 0 : avg acc = 	 97.11677445678717
+2024-06-01 16:33:36,904 main INFO: timestamp 1 : avg acc = 	 97.57336996398963
+2024-06-01 16:33:36,904 main INFO: timestamp 2 : avg acc = 	 97.48832324749009
+2024-06-01 16:33:36,905 main INFO: timestamp 3 : avg acc = 	 97.21163924942157
+2024-06-01 16:33:36,905 main INFO: timestamp 4 : avg acc = 	 94.31563169028493
+2024-06-01 16:33:36,905 main INFO: timestamp 5 : avg acc = 	 92.54096008994175
+2024-06-01 16:33:36,905 main INFO: timestamp 6 : avg acc = 	 85.15773585913482
+2024-06-01 16:33:36,905 main INFO: timestamp 7 : avg acc = 	 78.18479317183554
+2024-06-01 16:33:36,905 main INFO: timestamp 8 : avg acc = 	 70.20964854771567
+2024-06-01 16:33:36,905 main INFO: timestamp 9 : avg acc = 	 80.02525090974032
+2024-06-01 16:33:36,905 main INFO: timestamp 10 : avg acc = 	 88.21967942133247
+2024-06-01 16:33:36,905 main INFO: timestamp 11 : avg acc = 	 92.37705866528803
+2024-06-01 16:33:36,906 main INFO: timestamp 12 : avg acc = 	 93.04251802119101
+2024-06-01 16:33:36,906 main INFO: timestamp 13 : avg acc = 	 93.96362845518782
+2024-06-01 16:33:36,906 main INFO: timestamp 14 : avg acc = 	 95.77393470756775
+2024-06-01 16:33:36,906 main INFO: timestamp 15 : avg acc = 	 94.56349827922448
+2024-06-01 16:33:36,906 main INFO: timestamp 0 : worst acc = 	 96.48162627052385
+2024-06-01 16:33:36,906 main INFO: timestamp 1 : worst acc = 	 96.42857142857143
+2024-06-01 16:33:36,906 main INFO: timestamp 2 : worst acc = 	 96.61387220098307
+2024-06-01 16:33:36,906 main INFO: timestamp 3 : worst acc = 	 94.64773347897324
+2024-06-01 16:33:36,906 main INFO: timestamp 4 : worst acc = 	 90.8793009284544
+2024-06-01 16:33:36,906 main INFO: timestamp 5 : worst acc = 	 76.66483214089158
+2024-06-01 16:33:36,907 main INFO: timestamp 6 : worst acc = 	 62.41961414790996
+2024-06-01 16:33:36,907 main INFO: timestamp 7 : worst acc = 	 60.73151125401929
+2024-06-01 16:33:36,907 main INFO: timestamp 8 : worst acc = 	 60.28938906752411
+2024-06-01 16:33:36,907 main INFO: timestamp 9 : worst acc = 	 72.30707395498392
+2024-06-01 16:33:36,907 main INFO: timestamp 10 : worst acc = 	 85.24305555555556
+2024-06-01 16:33:36,907 main INFO: timestamp 11 : worst acc = 	 90.2199074074074
+2024-06-01 16:33:36,907 main INFO: timestamp 12 : worst acc = 	 90.36628198695435
+2024-06-01 16:33:36,907 main INFO: timestamp 13 : worst acc = 	 92.68527430221367
+2024-06-01 16:33:36,907 main INFO: timestamp 14 : worst acc = 	 94.17709335899904
+2024-06-01 16:33:36,907 main INFO: timestamp 15 : worst acc = 	 92.25753871230644
+2024-06-01 16:33:36,908 main INFO: 
+average of avg acc list: 	 90.485
+2024-06-01 16:33:36,908 main INFO: average of worst acc list: 	 84.526
+2024-06-01 16:33:37,169 main INFO: Runtime: 0.14 h
+

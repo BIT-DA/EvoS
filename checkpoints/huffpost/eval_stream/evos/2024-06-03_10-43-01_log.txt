@@ -1,0 +1,196 @@
+2024-06-03 10:43:01,354 main INFO: PTL.version = 9.2.0
+2024-06-03 10:43:01,354 main INFO: torch.version = 1.9.1+cu111
+2024-06-03 10:43:01,354 main INFO: torchvision.version = 0.10.1+cu111
+2024-06-03 10:43:01,354 main INFO: Running with config:
+K: 1
+buffer_size: 100
+coral_lambda: 1.0
+cut_mix: False
+data_dir: /data1/TL/data/wildtime/datasets/huffpost
+dataset: huffpost
+device: 1
+dim_bottleneck_f: None
+dim_head: 8
+emp_FI: False
+epochs: 50
+epsilon: 0.001
+eval_fix: False
+eval_metric: acc
+eval_next_timestamps: 3
+ewc_lambda: 1.0
+fisher_n: None
+gamma: 1.0
+gi_finetune_bs: 64
+gi_finetune_epochs: 5
+gi_start_to_finetune: None
+gpm_eps: 0.97
+gpm_eps_inc: 0.003
+group_size: 4
+hidden_dim: 256
+hidden_discriminator: 128
+init_timestamp: 2012
+irm_lambda: 1.0
+irm_penalty_anneal_iters: 0
+lambda_forgetting: 0.1
+latent_dim: 128
+lisa: False
+lisa_intra_domain: False
+lisa_start_time: 0
+log_dir: ./checkpoints/huffpost/eval_stream/evos
+log_name: log.txt
+lr: 2e-05
+lssae_coeff_ts: 1.0
+lssae_coeff_w: 1.0
+lssae_coeff_y: 1.0
+lssae_zc_dim: 64
+lssae_zw_dim: 64
+memory_pool: None
+method: evos
+mini_batch_size: 64
+mix_alpha: 2.0
+mixup: False
+momentum: 0.9
+num_head: 128
+num_layer_to_replace: -1
+num_rnn_layers: 1
+num_workers: 4
+online: False
+online_switch: False
+print_freq: 500
+random_seed: 1
+reduction: mean
+scale: 3
+scale_coff: 10
+si_c: 0.1
+split_time: 2015
+time_append_dim: 32
+time_dim: 8
+tradeoff_adv: 1.0
+truncate: 1.0
+warm_max_iters: None
+warm_multiply: 5.0
+weight_decay: 0.0
+window_size: 3
+yearbook_group_size: None
+2024-06-03 10:45:28,085 main INFO: -------------------start training on timestamp 2012-------------------
+2024-06-03 10:45:28,086 main INFO: self.train_dataset.len = 104 x 64 = 6701 samples
+2024-06-03 10:45:28,443 main INFO: eta: 0:30:49  timestamp: 2012  [iter: 0/5200]  loss_ce: 2.17620468 (2.17620468)  loss_standardization: 38.23171234 (38.23171234)  total_loss: 40.40791702 (40.40791702)  time: 0.35568309 (0.35568309)  max mem: 11.37 GB
+2024-06-03 10:45:29,977 main INFO: [0/5200]  ID timestamp = 2012: 	 accuracy is 45.833
+2024-06-03 10:47:47,426 main INFO: eta: 0:21:47  timestamp: 2012  [iter: 500/5200]  loss_ce: 0.09482957 (0.46360499)  loss_standardization: 24.46461105 (27.66673756)  total_loss: 24.55944061 (28.13034255)  time: 0.27642751 (0.27812130)  max mem: 12.36 GB
+2024-06-03 10:50:06,824 main INFO: eta: 0:19:29  timestamp: 2012  [iter: 1000/5200]  loss_ce: 0.01172986 (0.26154826)  loss_standardization: 26.77495956 (26.36888176)  total_loss: 26.78668976 (26.63043001)  time: 0.28172541 (0.27845831)  max mem: 12.36 GB
+2024-06-03 10:50:19,599 main INFO: [1040/5200]  ID timestamp = 2012: 	 accuracy is 85.215
+2024-06-03 10:52:28,638 main INFO: eta: 0:17:16  timestamp: 2012  [iter: 1500/5200]  loss_ce: 0.00294250 (0.17911377)  loss_standardization: 23.12904549 (25.78839530)  total_loss: 23.13198853 (25.96750908)  time: 0.27878165 (0.28018012)  max mem: 12.36 GB
+2024-06-03 10:54:49,155 main INFO: eta: 0:14:57  timestamp: 2012  [iter: 2000/5200]  loss_ce: 0.00271456 (0.13543948)  loss_standardization: 25.84798813 (25.41572943)  total_loss: 25.85070229 (25.55116892)  time: 0.27668285 (0.28039305)  max mem: 12.36 GB
+2024-06-03 10:55:13,199 main INFO: [2080/5200]  ID timestamp = 2012: 	 accuracy is 85.618
+2024-06-03 10:57:11,398 main INFO: eta: 0:12:39  timestamp: 2012  [iter: 2500/5200]  loss_ce: 0.00096855 (0.10886720)  loss_standardization: 27.06731796 (25.15524237)  total_loss: 27.06828690 (25.26410959)  time: 0.28385782 (0.28121121)  max mem: 12.36 GB
+2024-06-03 10:59:31,867 main INFO: eta: 0:10:18  timestamp: 2012  [iter: 3000/5200]  loss_ce: 0.00489755 (0.09113644)  loss_standardization: 24.98742676 (24.92248873)  total_loss: 24.99232483 (25.01362518)  time: 0.28495049 (0.28116571)  max mem: 12.36 GB
+2024-06-03 11:00:07,222 main INFO: [3120/5200]  ID timestamp = 2012: 	 accuracy is 85.618
+2024-06-03 11:01:53,730 main INFO: eta: 0:07:58  timestamp: 2012  [iter: 3500/5200]  loss_ce: 0.00127441 (0.07835504)  loss_standardization: 24.04751968 (24.76028815)  total_loss: 24.04879379 (24.83864320)  time: 0.28449225 (0.28153128)  max mem: 12.36 GB
+2024-06-03 11:04:14,057 main INFO: eta: 0:05:37  timestamp: 2012  [iter: 4000/5200]  loss_ce: 0.00119017 (0.06871902)  loss_standardization: 23.12925911 (24.55769044)  total_loss: 23.13044930 (24.62640947)  time: 0.28048038 (0.28142150)  max mem: 12.36 GB
+2024-06-03 11:05:00,647 main INFO: [4160/5200]  ID timestamp = 2012: 	 accuracy is 85.215
+2024-06-03 11:06:36,233 main INFO: eta: 0:03:17  timestamp: 2012  [iter: 4500/5200]  loss_ce: 0.00072663 (0.06121230)  loss_standardization: 22.10807037 (24.37879311)  total_loss: 22.10879707 (24.44000542)  time: 0.28278542 (0.28174700)  max mem: 12.36 GB
+2024-06-03 11:08:56,841 main INFO: eta: 0:00:56  timestamp: 2012  [iter: 5000/5200]  loss_ce: 0.00047571 (0.05516245)  loss_standardization: 21.12841034 (24.22453741)  total_loss: 21.12888527 (24.27969986)  time: 0.28596878 (0.28169395)  max mem: 12.36 GB
+2024-06-03 11:09:54,620 main INFO: [5200/5200]  ID timestamp = 2012: 	 accuracy is 85.349
+2024-06-03 11:09:54,621 main INFO: -------------------end training on timestamp 2012-------------------
+2024-06-03 11:09:56,212 main INFO: ID timestamp = 2012: 	 accuracy is 85.349
+2024-06-03 11:10:45,157 main INFO: acc of next 3 domains: 	 [80.37237237237237, 63.071987923388996, 57.22983257229832]
+2024-06-03 11:10:45,157 main INFO: avg acc of next 3 domains  : 	 66.891
+2024-06-03 11:10:45,157 main INFO: worst acc of next 3 domains: 	 57.230
+2024-06-03 11:10:45,617 main INFO: -------------------start training on timestamp 2013-------------------
+2024-06-03 11:10:45,619 main INFO: self.train_dataset.len = 117 x 64 = 7492 samples
+2024-06-03 11:10:45,902 main INFO: eta: 0:27:35  timestamp: 2013  [iter: 0/5850]  loss_ce: 0.63991952 (0.63991952)  loss_standardization: 23.69900513 (23.69900513)  loss_adv: 0.66195101 (0.66195101)  acc_dis: 62.50000000 (62.50000000)  total_loss: 25.00087547 (25.00087547)  time: 0.28295922 (0.28295922)  max mem: 12.36 GB
+2024-06-03 11:10:47,570 main INFO: [0/5850]  ID timestamp = 2013: 	 accuracy is 81.731
+2024-06-03 11:13:09,092 main INFO: eta: 0:25:32  timestamp: 2013  [iter: 500/5850]  loss_ce: 0.02557707 (0.30941027)  loss_standardization: 24.42149353 (28.18990104)  loss_adv: 0.09739162 (0.18358632)  acc_dis: 100.00000000 (99.42302894)  total_loss: 24.54446220 (28.68289767)  time: 0.28374028 (0.28637195)  max mem: 12.36 GB
+2024-06-03 11:15:30,519 main INFO: eta: 0:23:00  timestamp: 2013  [iter: 1000/5850]  loss_ce: 0.00476719 (0.17194337)  loss_standardization: 25.20408249 (26.68051836)  loss_adv: 0.04919819 (0.12668769)  acc_dis: 100.00000000 (99.71122627)  total_loss: 25.25804710 (26.97914944)  time: 0.28109479 (0.28461495)  max mem: 12.36 GB
+2024-06-03 11:16:20,185 main INFO: [1170/5850]  ID timestamp = 2013: 	 accuracy is 86.418
+2024-06-03 11:17:53,555 main INFO: eta: 0:20:40  timestamp: 2013  [iter: 1500/5850]  loss_ce: 0.00136137 (0.11683994)  loss_standardization: 24.30531693 (25.87202316)  loss_adv: 0.03350998 (0.09877965)  acc_dis: 100.00000000 (99.80689957)  total_loss: 24.34018898 (26.08764276)  time: 0.28262377 (0.28509996)  max mem: 12.36 GB
+2024-06-03 11:20:15,276 main INFO: eta: 0:18:16  timestamp: 2013  [iter: 2000/5850]  loss_ce: 0.00161585 (0.08827892)  loss_standardization: 26.04803848 (25.43464546)  loss_adv: 0.02294110 (0.08119853)  acc_dis: 100.00000000 (99.85476012)  total_loss: 26.07259560 (25.60412292)  time: 0.28105092 (0.28468564)  max mem: 12.36 GB
+2024-06-03 11:21:53,404 main INFO: [2340/5850]  ID timestamp = 2013: 	 accuracy is 86.298
+2024-06-03 11:22:38,737 main INFO: eta: 0:15:55  timestamp: 2013  [iter: 2500/5850]  loss_ce: 0.00134201 (0.07100039)  loss_standardization: 23.35362816 (25.10110455)  loss_adv: 0.01867022 (0.06903951)  acc_dis: 100.00000000 (99.88379648)  total_loss: 23.37364197 (25.24114446)  time: 0.28257585 (0.28513247)  max mem: 12.36 GB
+2024-06-03 11:25:00,313 main INFO: eta: 0:13:31  timestamp: 2013  [iter: 3000/5850]  loss_ce: 0.00090489 (0.05937115)  loss_standardization: 22.30874252 (24.83671526)  loss_adv: 0.01364349 (0.06012778)  acc_dis: 100.00000000 (99.90315728)  total_loss: 22.32328987 (24.95621418)  time: 0.27995872 (0.28480260)  max mem: 12.36 GB
+2024-06-03 11:27:22,026 main INFO: eta: 0:11:08  timestamp: 2013  [iter: 3500/5850]  loss_ce: 0.00054193 (0.05102413)  loss_standardization: 22.98975372 (24.59720155)  loss_adv: 0.01123634 (0.05330493)  acc_dis: 100.00000000 (99.91698800)  total_loss: 23.00153160 (24.70153061)  time: 0.28417158 (0.28460577)  max mem: 12.36 GB
+2024-06-03 11:27:26,567 main INFO: [3510/5850]  ID timestamp = 2013: 	 accuracy is 86.418
+2024-06-03 11:29:45,523 main INFO: eta: 0:08:47  timestamp: 2013  [iter: 4000/5850]  loss_ce: 0.00061706 (0.04474920)  loss_standardization: 23.68124199 (24.38852629)  loss_adv: 0.00889575 (0.04792662)  acc_dis: 100.00000000 (99.92736191)  total_loss: 23.69075584 (24.48120211)  time: 0.28010845 (0.28490421)  max mem: 12.36 GB
+2024-06-03 11:32:07,221 main INFO: eta: 0:06:24  timestamp: 2013  [iter: 4500/5850]  loss_ce: 0.00059821 (0.03986349)  loss_standardization: 22.52567482 (24.19817164)  loss_adv: 0.00817989 (0.04357281)  acc_dis: 100.00000000 (99.93543102)  total_loss: 22.53445435 (24.28160793)  time: 0.28361702 (0.28473658)  max mem: 12.36 GB
+2024-06-03 11:32:59,757 main INFO: [4680/5850]  ID timestamp = 2013: 	 accuracy is 86.418
+2024-06-03 11:34:30,206 main INFO: eta: 0:04:02  timestamp: 2013  [iter: 5000/5850]  loss_ce: 0.00042503 (0.03594449)  loss_standardization: 22.15377045 (24.01638461)  loss_adv: 0.00680125 (0.03997072)  acc_dis: 100.00000000 (99.94188662)  total_loss: 22.16099739 (24.09229983)  time: 0.27978039 (0.28485993)  max mem: 12.36 GB
+2024-06-03 11:36:51,544 main INFO: eta: 0:01:39  timestamp: 2013  [iter: 5500/5850]  loss_ce: 0.00031859 (0.03272827)  loss_standardization: 24.30016708 (23.84191580)  loss_adv: 0.00645209 (0.03694704)  acc_dis: 100.00000000 (99.94716870)  total_loss: 24.30693817 (23.91159111)  time: 0.28663278 (0.28466125)  max mem: 12.36 GB
+2024-06-03 11:38:32,451 main INFO: [5850/5850]  ID timestamp = 2013: 	 accuracy is 86.779
+2024-06-03 11:38:32,451 main INFO: -------------------end training on timestamp 2013-------------------
+2024-06-03 11:38:34,273 main INFO: ID timestamp = 2013: 	 accuracy is 86.779
+2024-06-03 11:39:27,997 main INFO: acc of next 3 domains: 	 [67.51580337767714, 62.66362252663622, 61.47086426072861]
+2024-06-03 11:39:27,997 main INFO: avg acc of next 3 domains  : 	 63.883
+2024-06-03 11:39:27,997 main INFO: worst acc of next 3 domains: 	 61.471
+2024-06-03 11:39:28,450 main INFO: -------------------start training on timestamp 2014-------------------
+2024-06-03 11:39:28,452 main INFO: self.train_dataset.len = 149 x 64 = 9539 samples
+2024-06-03 11:39:28,736 main INFO: eta: 0:35:08  timestamp: 2014  [iter: 0/7450]  loss_ce: 2.65670776 (2.65670776)  loss_standardization: 23.28332520 (23.28332520)  loss_adv: 0.01308823 (0.01308823)  acc_dis: 100.00000000 (100.00000000)  total_loss: 25.95312119 (25.95312119)  time: 0.28308105 (0.28308105)  max mem: 12.38 GB
+2024-06-03 11:39:30,768 main INFO: [0/7450]  ID timestamp = 2014: 	 accuracy is 67.989
+2024-06-03 11:41:53,423 main INFO: eta: 0:33:31  timestamp: 2014  [iter: 500/7450]  loss_ce: 0.15228897 (0.51647132)  loss_standardization: 10.71576309 (16.69111232)  loss_adv: 0.00848805 (0.01130513)  acc_dis: 100.00000000 (99.99220309)  total_loss: 10.87654018 (17.21888876)  time: 0.28395867 (0.28936223)  max mem: 12.46 GB
+2024-06-03 11:44:15,811 main INFO: eta: 0:30:51  timestamp: 2014  [iter: 1000/7450]  loss_ce: 0.01074132 (0.30608592)  loss_standardization: 7.61038113 (12.70312241)  loss_adv: 0.00752440 (0.00959061)  acc_dis: 100.00000000 (99.99609765)  total_loss: 7.62864685 (13.01879893)  time: 0.28159714 (0.28707054)  max mem: 12.46 GB
+2024-06-03 11:46:37,293 main INFO: [1490/7450]  ID timestamp = 2014: 	 accuracy is 74.032
+2024-06-03 11:46:40,142 main INFO: eta: 0:28:31  timestamp: 2014  [iter: 1500/7450]  loss_ce: 0.02070678 (0.21220243)  loss_standardization: 9.11569595 (11.21913352)  loss_adv: 0.00668724 (0.00871614)  acc_dis: 100.00000000 (99.99739757)  total_loss: 9.14309025 (11.44005210)  time: 0.28174829 (0.28760061)  max mem: 12.46 GB
+2024-06-03 11:49:02,431 main INFO: eta: 0:26:03  timestamp: 2014  [iter: 2000/7450]  loss_ce: 0.00411979 (0.16135150)  loss_standardization: 7.19135666 (10.44251460)  loss_adv: 0.00549981 (0.00806693)  acc_dis: 100.00000000 (99.99804785)  total_loss: 7.20097637 (10.61193303)  time: 0.28533769 (0.28684510)  max mem: 12.46 GB
+2024-06-03 11:51:24,971 main INFO: eta: 0:23:38  timestamp: 2014  [iter: 2500/7450]  loss_ce: 0.00221771 (0.12997885)  loss_standardization: 8.70309448 (9.96462634)  loss_adv: 0.00494520 (0.00751991)  acc_dis: 100.00000000 (99.99843812)  total_loss: 8.71025658 (10.10212510)  time: 0.29030943 (0.28649235)  max mem: 12.46 GB
+2024-06-03 11:53:43,662 main INFO: [2980/7450]  ID timestamp = 2014: 	 accuracy is 74.788
+2024-06-03 11:53:49,370 main INFO: eta: 0:21:16  timestamp: 2014  [iter: 3000/7450]  loss_ce: 0.00088274 (0.10882844)  loss_standardization: 7.29548120 (9.64402735)  loss_adv: 0.00433421 (0.00705711)  acc_dis: 100.00000000 (99.99869835)  total_loss: 7.30069828 (9.75991291)  time: 0.28730845 (0.28687620)  max mem: 12.46 GB
+2024-06-03 11:56:11,631 main INFO: eta: 0:18:51  timestamp: 2014  [iter: 3500/7450]  loss_ce: 0.00112347 (0.09370870)  loss_standardization: 8.27018833 (9.40778870)  loss_adv: 0.00395521 (0.00665648)  acc_dis: 100.00000000 (99.99888425)  total_loss: 8.27526665 (9.50815388)  time: 0.28096819 (0.28654014)  max mem: 12.46 GB
+2024-06-03 11:58:33,711 main INFO: eta: 0:16:27  timestamp: 2014  [iter: 4000/7450]  loss_ce: 0.00051994 (0.08221498)  loss_standardization: 7.58634281 (9.22300204)  loss_adv: 0.00360591 (0.00630548)  acc_dis: 100.00000000 (99.99902368)  total_loss: 7.59046841 (9.31152249)  time: 0.28557229 (0.28624262)  max mem: 12.46 GB
+2024-06-03 12:00:49,651 main INFO: [4470/7450]  ID timestamp = 2014: 	 accuracy is 75.637
+2024-06-03 12:00:58,166 main INFO: eta: 0:14:05  timestamp: 2014  [iter: 4500/7450]  loss_ce: 0.00025105 (0.07327786)  loss_standardization: 10.69949150 (9.08886785)  loss_adv: 0.00361721 (0.00599761)  acc_dis: 100.00000000 (99.99913214)  total_loss: 10.70335960 (9.16814331)  time: 0.28427052 (0.28653891)  max mem: 12.46 GB
+2024-06-03 12:03:20,199 main INFO: eta: 0:11:41  timestamp: 2014  [iter: 5000/7450]  loss_ce: 0.00067157 (0.06611223)  loss_standardization: 7.81485844 (8.97371800)  loss_adv: 0.00349874 (0.00572285)  acc_dis: 100.00000000 (99.99921891)  total_loss: 7.81902838 (9.04555308)  time: 0.28278875 (0.28629163)  max mem: 12.46 GB
+2024-06-03 12:05:42,254 main INFO: eta: 0:09:17  timestamp: 2014  [iter: 5500/7450]  loss_ce: 0.05259219 (0.06025688)  loss_standardization: 7.42101669 (8.87882180)  loss_adv: 0.00292315 (0.00547598)  acc_dis: 100.00000000 (99.99928990)  total_loss: 7.47653198 (8.94455466)  time: 0.28507113 (0.28609317)  max mem: 12.46 GB
+2024-06-03 12:07:54,415 main INFO: [5960/7450]  ID timestamp = 2014: 	 accuracy is 75.165
+2024-06-03 12:08:05,750 main INFO: eta: 0:06:54  timestamp: 2014  [iter: 6000/7450]  loss_ce: 0.00046049 (0.05535953)  loss_standardization: 9.16209698 (8.80018011)  loss_adv: 0.00263094 (0.00525389)  acc_dis: 100.00000000 (99.99934907)  total_loss: 9.16518879 (8.86079353)  time: 0.28532267 (0.28616805)  max mem: 12.46 GB
+2024-06-03 12:10:27,475 main INFO: eta: 0:04:31  timestamp: 2014  [iter: 6500/7450]  loss_ce: 0.00019889 (0.05117943)  loss_standardization: 7.41795444 (8.73405342)  loss_adv: 0.00251142 (0.00505206)  acc_dis: 100.00000000 (99.99939913)  total_loss: 7.42066479 (8.79028490)  time: 0.28497100 (0.28595902)  max mem: 12.46 GB
+2024-06-03 12:12:49,898 main INFO: eta: 0:02:08  timestamp: 2014  [iter: 7000/7450]  loss_ce: 0.00072051 (0.04761395)  loss_standardization: 8.51449013 (8.67747262)  loss_adv: 0.00244431 (0.00486785)  acc_dis: 100.00000000 (99.99944204)  total_loss: 8.51765537 (8.72995443)  time: 0.28351068 (0.28587945)  max mem: 12.46 GB
+2024-06-03 12:14:59,798 main INFO: [7450/7450]  ID timestamp = 2014: 	 accuracy is 75.354
+2024-06-03 12:14:59,799 main INFO: -------------------end training on timestamp 2014-------------------
+2024-06-03 12:15:01,931 main INFO: ID timestamp = 2014: 	 accuracy is 75.354
+2024-06-03 12:15:52,841 main INFO: acc of next 3 domains: 	 [71.0806697108067, 69.51625287944715, 69.00751195083087]
+2024-06-03 12:15:52,841 main INFO: avg acc of next 3 domains  : 	 69.868
+2024-06-03 12:15:52,841 main INFO: worst acc of next 3 domains: 	 69.008
+2024-06-03 12:15:53,300 main INFO: -------------------start training on timestamp 2015-------------------
+2024-06-03 12:15:53,302 main INFO: self.train_dataset.len = 184 x 64 = 11826 samples
+2024-06-03 12:15:53,596 main INFO: eta: 0:44:59  timestamp: 2015  [iter: 0/9200]  loss_consistency: 17.02875519 (17.02875519)  loss_ce: 1.99018824 (1.99018824)  loss_standardization: 14.96842003 (14.96842003)  loss_adv: 0.02039144 (0.02039144)  acc_dis: 100.00000000 (100.00000000)  total_loss: 34.00775528 (34.00775528)  time: 0.29337668 (0.29337668)  max mem: 12.55 GB
+2024-06-03 12:15:55,952 main INFO: [0/9200]  ID timestamp = 2015: 	 accuracy is 70.754
+2024-06-03 12:18:18,598 main INFO: eta: 0:42:03  timestamp: 2015  [iter: 500/9200]  loss_consistency: 0.07563153 (1.03658895)  loss_ce: 0.60583025 (0.74989916)  loss_standardization: 7.53626442 (12.24556100)  loss_adv: 0.00410003 (0.00516636)  acc_dis: 100.00000000 (100.00000000)  total_loss: 8.22182560 (14.03721550)  time: 0.28428698 (0.29001038)  max mem: 12.83 GB
+2024-06-03 12:20:41,972 main INFO: eta: 0:39:24  timestamp: 2015  [iter: 1000/9200]  loss_consistency: 0.05687746 (0.54904620)  loss_ce: 0.05622582 (0.47138200)  loss_standardization: 7.89891672 (10.73382612)  loss_adv: 0.00376359 (0.00450833)  acc_dis: 100.00000000 (100.00000000)  total_loss: 8.01578331 (11.75876268)  time: 0.28923202 (0.28838021)  max mem: 12.83 GB
+2024-06-03 12:23:05,447 main INFO: eta: 0:36:56  timestamp: 2015  [iter: 1500/9200]  loss_consistency: 0.05892362 (0.38434366)  loss_ce: 0.00628757 (0.33285563)  loss_standardization: 7.62243700 (10.10177339)  loss_adv: 0.00332796 (0.00418458)  acc_dis: 100.00000000 (100.00000000)  total_loss: 7.69097614 (10.82315726)  time: 0.29242396 (0.28790400)  max mem: 12.83 GB
+2024-06-03 12:24:44,937 main INFO: [1840/9200]  ID timestamp = 2015: 	 accuracy is 77.989
+2024-06-03 12:25:30,610 main INFO: eta: 0:34:37  timestamp: 2015  [iter: 2000/9200]  loss_consistency: 0.04495332 (0.30267128)  loss_ce: 0.01410623 (0.25430040)  loss_standardization: 9.42329597 (9.67285437)  loss_adv: 0.00318277 (0.00395720)  acc_dis: 100.00000000 (100.00000000)  total_loss: 9.48553753 (10.23378325)  time: 0.28689790 (0.28850902)  max mem: 12.83 GB
+2024-06-03 12:27:53,190 main INFO: eta: 0:32:08  timestamp: 2015  [iter: 2500/9200]  loss_consistency: 0.04430715 (0.25328115)  loss_ce: 0.00180284 (0.20518427)  loss_standardization: 8.76605225 (9.39351846)  loss_adv: 0.00286571 (0.00376703)  acc_dis: 100.00000000 (100.00000000)  total_loss: 8.81502819 (9.85575091)  time: 0.28530073 (0.28783949)  max mem: 12.83 GB
+2024-06-03 12:30:15,647 main INFO: eta: 0:29:41  timestamp: 2015  [iter: 3000/9200]  loss_consistency: 0.03182331 (0.22209565)  loss_ce: 0.00198071 (0.17209735)  loss_standardization: 8.84697914 (9.21735301)  loss_adv: 0.00265175 (0.00360155)  acc_dis: 100.00000000 (100.00000000)  total_loss: 8.88343525 (9.61514756)  time: 0.28460598 (0.28735192)  max mem: 12.83 GB
+2024-06-03 12:32:37,946 main INFO: eta: 0:27:15  timestamp: 2015  [iter: 3500/9200]  loss_consistency: 0.05508819 (0.19942241)  loss_ce: 0.00051652 (0.14812298)  loss_standardization: 8.14421082 (9.07085457)  loss_adv: 0.00243041 (0.00345292)  acc_dis: 100.00000000 (100.00000000)  total_loss: 8.20224571 (9.42185287)  time: 0.28573298 (0.28695853)  max mem: 12.83 GB
+2024-06-03 12:33:31,653 main INFO: [3680/9200]  ID timestamp = 2015: 	 accuracy is 79.284
+2024-06-03 12:35:03,037 main INFO: eta: 0:24:54  timestamp: 2015  [iter: 4000/9200]  loss_consistency: 0.04828052 (0.18131600)  loss_ce: 0.00392124 (0.13020967)  loss_standardization: 7.71304989 (8.97465050)  loss_adv: 0.00235675 (0.00331993)  acc_dis: 100.00000000 (100.00000000)  total_loss: 7.76760817 (9.28949609)  time: 0.28762674 (0.28736131)  max mem: 12.83 GB
+2024-06-03 12:37:25,725 main INFO: eta: 0:22:29  timestamp: 2015  [iter: 4500/9200]  loss_consistency: 0.05987358 (0.16806715)  loss_ce: 0.00328825 (0.11616120)  loss_standardization: 7.82910538 (8.89435310)  loss_adv: 0.00211919 (0.00319947)  acc_dis: 100.00000000 (100.00000000)  total_loss: 7.89438629 (9.18178091)  time: 0.28247380 (0.28714084)  max mem: 12.83 GB
+2024-06-03 12:39:48,710 main INFO: eta: 0:20:05  timestamp: 2015  [iter: 5000/9200]  loss_consistency: 0.07135508 (0.15862977)  loss_ce: 0.00289294 (0.10491813)  loss_standardization: 7.46312523 (8.83182874)  loss_adv: 0.00204260 (0.00308918)  acc_dis: 100.00000000 (100.00000000)  total_loss: 7.53941584 (9.09846582)  time: 0.28716588 (0.28702376)  max mem: 12.83 GB
+2024-06-03 12:42:11,662 main INFO: eta: 0:17:41  timestamp: 2015  [iter: 5500/9200]  loss_consistency: 0.10429018 (0.15000222)  loss_ce: 0.00070183 (0.09563080)  loss_standardization: 9.31876183 (8.77556656)  loss_adv: 0.00195316 (0.00298887)  acc_dis: 100.00000000 (100.00000000)  total_loss: 9.42570686 (9.02418845)  time: 0.28440738 (0.28692184)  max mem: 12.83 GB
+2024-06-03 12:42:19,791 main INFO: [5520/9200]  ID timestamp = 2015: 	 accuracy is 78.903
+2024-06-03 12:44:37,187 main INFO: eta: 0:15:19  timestamp: 2015  [iter: 6000/9200]  loss_consistency: 0.09889539 (0.14367795)  loss_ce: 0.00048119 (0.08781266)  loss_standardization: 8.38751221 (8.72875205)  loss_adv: 0.00177528 (0.00289530)  acc_dis: 100.00000000 (100.00000000)  total_loss: 8.48866463 (8.96313795)  time: 0.28803802 (0.28726574)  max mem: 12.83 GB
+2024-06-03 12:46:59,851 main INFO: eta: 0:12:55  timestamp: 2015  [iter: 6500/9200]  loss_consistency: 0.06542409 (0.13782269)  loss_ce: 0.00057116 (0.08119755)  loss_standardization: 6.23867893 (8.68640975)  loss_adv: 0.00171336 (0.00280936)  acc_dis: 100.00000000 (100.00000000)  total_loss: 6.30638742 (8.90823936)  time: 0.28484488 (0.28711666)  max mem: 12.83 GB
+2024-06-03 12:49:22,615 main INFO: eta: 0:10:31  timestamp: 2015  [iter: 7000/9200]  loss_consistency: 0.07089581 (0.13149764)  loss_ce: 0.00462318 (0.07555605)  loss_standardization: 7.53832054 (8.64850389)  loss_adv: 0.00163377 (0.00272946)  acc_dis: 100.00000000 (100.00000000)  total_loss: 7.61547327 (8.85828703)  time: 0.28812408 (0.28700317)  max mem: 12.83 GB
+2024-06-03 12:51:07,945 main INFO: [7360/9200]  ID timestamp = 2015: 	 accuracy is 78.675
+2024-06-03 12:51:47,965 main INFO: eta: 0:08:08  timestamp: 2015  [iter: 7500/9200]  loss_consistency: 0.03863152 (0.12663679)  loss_ce: 0.00028292 (0.07060709)  loss_standardization: 9.45264339 (8.61004793)  loss_adv: 0.00154695 (0.00265405)  acc_dis: 100.00000000 (100.00000000)  total_loss: 9.49310493 (8.80994586)  time: 0.28224945 (0.28724961)  max mem: 12.83 GB
+2024-06-03 12:54:10,758 main INFO: eta: 0:05:44  timestamp: 2015  [iter: 8000/9200]  loss_consistency: 0.06287659 (0.12259058)  loss_ce: 0.00034860 (0.06629001)  loss_standardization: 8.95863056 (8.57735594)  loss_adv: 0.00148279 (0.00258417)  acc_dis: 100.00000000 (100.00000000)  total_loss: 9.02333832 (8.76882068)  time: 0.28744650 (0.28714568)  max mem: 12.83 GB
+2024-06-03 12:56:33,727 main INFO: eta: 0:03:20  timestamp: 2015  [iter: 8500/9200]  loss_consistency: 0.03166047 (0.11914512)  loss_ce: 0.02083021 (0.06248057)  loss_standardization: 7.39040041 (8.55310238)  loss_adv: 0.00139998 (0.00251851)  acc_dis: 100.00000000 (100.00000000)  total_loss: 7.44429111 (8.73724657)  time: 0.28547478 (0.28707462)  max mem: 12.83 GB
+2024-06-03 12:58:56,517 main INFO: eta: 0:00:57  timestamp: 2015  [iter: 9000/9200]  loss_consistency: 0.10184678 (0.11594450)  loss_ce: 0.00205009 (0.05908317)  loss_standardization: 8.97263241 (8.53283957)  loss_adv: 0.00137012 (0.00245637)  acc_dis: 100.00000000 (100.00000000)  total_loss: 9.07789993 (8.71032360)  time: 0.28654027 (0.28699151)  max mem: 12.83 GB
+2024-06-03 12:59:56,138 main INFO: [9200/9200]  ID timestamp = 2015: 	 accuracy is 79.208
+2024-06-03 12:59:56,140 main INFO: -------------------end training on timestamp 2015-------------------
+2024-06-03 12:59:58,645 main INFO: ID timestamp = 2015: 	 accuracy is 79.208
+2024-06-03 13:00:35,977 main INFO: acc of next 3 domains: 	 [73.57733981742172, 70.0091053949465, 72.49357326478149]
+2024-06-03 13:00:35,977 main INFO: avg acc of next 3 domains  : 	 72.027
+2024-06-03 13:00:35,977 main INFO: worst acc of next 3 domains: 	 70.009
+2024-06-03 13:00:35,978 main INFO: timestamp 2012 : avg acc = 	 66.89139762268655
+2024-06-03 13:00:35,978 main INFO: timestamp 2013 : avg acc = 	 63.88343005501398
+2024-06-03 13:00:35,978 main INFO: timestamp 2014 : avg acc = 	 69.86814484702825
+2024-06-03 13:00:35,978 main INFO: timestamp 2015 : avg acc = 	 72.02667282571657
+2024-06-03 13:00:35,978 main INFO: timestamp 2012 : worst acc = 	 57.22983257229832
+2024-06-03 13:00:35,978 main INFO: timestamp 2013 : worst acc = 	 61.47086426072861
+2024-06-03 13:00:35,978 main INFO: timestamp 2014 : worst acc = 	 69.00751195083087
+2024-06-03 13:00:35,978 main INFO: timestamp 2015 : worst acc = 	 70.0091053949465
+2024-06-03 13:00:35,979 main INFO: 
+average of avg acc list: 	 68.167
+2024-06-03 13:00:35,979 main INFO: average of worst acc list: 	 64.429
+2024-06-03 13:00:36,219 main INFO: Runtime: 2.25 h
+
